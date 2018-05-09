@@ -1,4 +1,5 @@
 %% Matlab Assignment #1
+% Zhenghao Zhu
 
 %% Problem 1:
 p1 = num2str(sinh(log(2)) + (exp(pi) - atan(-1))^(1/2),11);

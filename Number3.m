@@ -38,6 +38,7 @@ fxy = diff(f(x,y),x,y)
 %% Problem 3:
 syms x y z
 integral = int(int(int(1,[1 x + 2]), [0 x^2]), [0 2])
+
 %% Problem 4:
 syms n
 S1 = symsum((2)/(n*(n+1)), n, 1, Inf)

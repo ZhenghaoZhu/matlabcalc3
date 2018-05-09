@@ -10,6 +10,9 @@ z = x.*exp(-x.^2-y.^2);
 set(h,'LineWidth',2)
 colorbar;
 
+%% TESTS
+ 
+
 %% Problem 2: [DONE]
 syms x y
 f = @(x,y) (x^3) + (y^3) - (3*x*y);
@@ -37,18 +40,15 @@ z = v;
 surf(x, y, z);
 hold off
 
-%% Problem 4: [DONE]
-t = linspace(0,pi,30);
-h = linspace(0,2*pi,30);
-[t,h] = meshgrid(t,h);
-x = (exp(t).*sin(t)).*cos(h);
-y = t;
-z = (exp(t).*sin(t)).*sin(h);
+%% Problem 4:
+t=linspace(0,pi,30);
+h=linspace(0,2*pi,30);
+[t,h]=meshgrid(t,h);
+y=t;
+x=(exp(t).*sin(t)).*cos(h);
+z=(exp(t).*sin(t)).*sin(h);
 surf(x,y,z)
-xlabel('x')
-ylabel('y')
-zlabel('z')
-view([0, 2, -1]);
+view([0, 2, -1])
 
 %% Problem 5 [DONE?]
 t = linspace(0,12,50);
