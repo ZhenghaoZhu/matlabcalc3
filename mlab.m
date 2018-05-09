@@ -305,3 +305,30 @@ surf(x,y,z,'FaceColor','g')
 view([0 0 2])
 axis equal
 A='bluelines.jpg'
+
+%% MATLAB Day 11
+
+%% Computing Double Integrals
+syms x y
+A = int(int(1-y^2, y, -1, 1), x, 0,3); % Should be 4
+
+%% 
+B = int(int(y / (x^2+1), y, 0,sqrt(x)),x,0,4);
+
+%%
+C = int(int(sin(pi/8*(y^3)),x,0,y^2),y,0,2);
+
+%%
+syms n
+I = symsum(2/(n^2+2*n),n,1,Inf);
+
+%%
+II = symsum(cos(1/(n^2)),n,1,Inf);
+
+%%
+III = symsym((-1)^n8n/sqrt(n^2+1),n,o,Inf);
+
+%%
+IV = syms((-1)^(n+1)/n,1,Inf);
+
+
