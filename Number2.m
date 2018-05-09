@@ -8,6 +8,7 @@ z = x.*exp(-x.^2-y.^2);
 [C,h] = contour3(x,y,z,9);
 set(h,'LineWidth',2)
 colorbar;
+
 %% TESTS
 r = linspace(1,3,50);
 theta = linspace(0,2*pi,50);
@@ -43,6 +44,7 @@ y = 2*sin(u);
 z = v;
 surf(x, y, z);
 hold off
+
 %% Problem 4:
 t=linspace(0,pi,30);
 h=linspace(0,2*pi,30);
@@ -51,6 +53,7 @@ y=t;
 x=(exp(t).*sin(t)).*cos(h);
 z=(exp(t).*sin(t)).*sin(h);
 surf(x,y,z)
+
 %% Problem 5
 t=linspace(0,2,20);
 s=linspace(0,1,20);
@@ -64,6 +67,7 @@ z=0*t;
 view ([3,-2,1])
 surf(x,y,z,'FaceColor','g')
 hold off
+
 %% Problem 6:
 u=linspace(1,9,50);
 h=linspace(0,2*pi,50);
