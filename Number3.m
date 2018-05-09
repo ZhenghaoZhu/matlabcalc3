@@ -1,6 +1,7 @@
 %% Assignment #3
+% Zhenghao Zhu
 
-%% Problem 1: [DONE]
+%% Problem 1:
 syms x y z t
 P = @(x,y,z) 10+25/(z.^2+1)+sin(2*x.^2+y.^3+z);
 % A)
@@ -21,21 +22,23 @@ Pt = P(2*t-1,exp(2*t-2)-1,t^3-t-2);
 ft = @(t)subs(Pt);
 g = diff(ft(t),t);
 gt=@(t)subs(g);
-dPdtx = gt(1)*fx
-dPdty = gt(0)*fy
-dPdtz = gt(-2)*fz
+dPdt_x = gt(1)*fx;
+dPdt_y = gt(0)*fy;
+dPdt_z = gt(-2)*fz;
 
-%% Problem 2: [DONE]
+dPdt_sum = dPdt_x + dPdt_y + dPdt_z
+
+%% Problem 2:
 f = @(x,y) 2*x.^4-x.^2+3*y.^2;
 
 fxx = diff(f(x,y),x,x)
 fyy = diff(f(x,y),y,y)
 fxy = diff(f(x,y),x,y)
 
-%% Problem 3: [NOT DONE]
-% x = 2, y = 0, y = x^2, z = 1, amd z = x + 2 
-
-%% Problem 4: [DONE]
+%% Problem 3:
+syms x y z
+integral = int(int(int(1,[1 x + 2]), [0 x^2]), [0 2])
+%% Problem 4:
 syms n
 S1 = symsum((2)/(n*(n+1)), n, 1, Inf)
 S2 = symsum((-1^(n+1))/n, n, 1, Inf)
