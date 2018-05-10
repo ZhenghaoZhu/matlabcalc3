@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Matlab Assignment #2:</h1><!--introduction--><p>Zhenghao Zhu</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Problem 1: [DONE]</a></li><li><a href="#2">Problem 2: [DONE]</a></li><li><a href="#3">Problem 3:</a></li><li><a href="#4">Problem 4: [DONE]</a></li><li><a href="#5">Problem 5 [DONE]</a></li><li><a href="#6">Problem 6: [DONE]</a></li></ul></div><h2 id="1">Problem 1: [DONE]</h2><pre class="codeinput">x = linspace(-2,2,25);
+  </style></head><body><div class="content"><h1>Matlab Assignment #2:</h1><!--introduction--><p>Zhenghao Zhu</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Problem 1: [DONE]</a></li><li><a href="#2">Problem 2: [DONE]</a></li><li><a href="#3">Problem 3: [NOT DONE]</a></li><li><a href="#4">Problem 4: [DONE]</a></li><li><a href="#5">Problem 5 [DONE]</a></li><li><a href="#6">Problem 6: [DONE]</a></li></ul></div><h2 id="1">Problem 1: [DONE]</h2><pre class="codeinput">x = linspace(-2,2,25);
 y = x;
 [x,y] = meshgrid(x,y);
 z = x.*exp(-x.^2-y.^2);
@@ -84,7 +84,7 @@ hold <span class="string">off</span>
 </pre><pre class="codeoutput">Warning: Function behaves unexpectedly on array inputs. To improve performance,
 properly vectorize your function to return an output with the same size and
 shape as the input arguments. 
-</pre><img vspace="5" hspace="5" src="Number2_02.png" alt=""> <h2 id="3">Problem 3:</h2><pre class="codeinput">syms <span class="string">y</span>
+</pre><img vspace="5" hspace="5" src="Number2_02.png" alt=""> <h2 id="3">Problem 3: [NOT DONE]</h2><pre class="codeinput">syms <span class="string">y</span>
 x = linspace(-2,2,50);
 z = 5-y*y;
 fsurf(z, [-2 2]);
@@ -150,7 +150,7 @@ fsurf(g , [0 2 1 3],'g');
 view([-3 , 1 , -1]);
 hold off
 
-%% Problem 3:
+%% Problem 3: [NOT DONE]
 syms y
 x = linspace(-2,2,50);
 z = 5-y*y;

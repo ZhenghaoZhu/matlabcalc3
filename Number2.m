@@ -21,19 +21,13 @@ view([-3 , 1 , -1]);
 hold off
 
 %% Problem 3: [NOT DONE]
-syms y
-x = linspace(-2,2,50);
-z = 5-y*y;
-fsurf(z, [-2 2]);
-hold on
-u = linspace(0,2*pi,50);
-v = linspace(0,5,50);
-[u,v]=meshgrid(u,v);
-x = 2*cos(u);
-y = 2*sin(u);
-z = v;
+r= linspace(0,2,50);
+t = linspace(0,2*pi,50);
+[r,t] = meshgrid(r,t);
+x = r.*cos(t);
+y = r.*sin(t);
+z = 5 - y.^2;
 surf(x,y,z);
-hold off
 
 %% Problem 4: [DONE]
 t = linspace(0,pi,30);
