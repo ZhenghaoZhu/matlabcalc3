@@ -19,22 +19,20 @@ hold on
 fsurf(g , [0 2 1 3],'g');
 view([-3 , 1 , -1]);
 hold off
+
 %% Problem 3:
-o=linspace(0,2*pi,50);
-l=linspace(0,5,50);
-[o,l]=meshgrid(o,l);
-x=l;
-y=sqrt(5).*cos(o);
-z=5*l;
-surf(x,y,z)
+syms y
+x = linspace(-2,2,50);
+z = 5-y*y;
+fsurf(z, [-2 2]);
 hold on
 u = linspace(0,2*pi,50);
 v = linspace(0,5,50);
-[u,v] = meshgrid(u,v);
+[u,v]=meshgrid(u,v);
 x = 2*cos(u);
 y = 2*sin(u);
 z = v;
-surf(x, y, z);
+surf(x,y,z);
 hold off
 
 %% Problem 4: [DONE]
@@ -50,7 +48,7 @@ ylabel('y')
 zlabel('z')
 view([0, 2, -1]);
 
-%% Problem 5 [DONE?]
+%% Problem 5 [DONE]
 t = linspace(0,12,50);
 s = linspace(0,12,50);
 [s,t]=meshgrid(s,t);
@@ -63,7 +61,7 @@ view ([3,-2,1])
 surf(x,y,z)
 hold off
 
-%% Problem 6: [DONE?]
+%% Problem 6: [DONE]
 r = linspace(1,3,50);
 theta = linspace(0,2*pi,50);
 [r,theta] = meshgrid(r,theta);
