@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Matlab Assignment #2:</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-05-09"><meta name="DC.source" content="Number2.m"><style type="text/css">
+      --><title>Matlab Assignment #2:</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-05-10"><meta name="DC.source" content="Number2.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,7 +66,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Matlab Assignment #2:</h1><!--introduction--><p>Zhenghao Zhu</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Problem 1: [DONE]</a></li><li><a href="#2">Problem 2: [DONE]</a></li><li><a href="#3">Problem 3:</a></li><li><a href="#4">Problem 4: [DONE]</a></li><li><a href="#5">Problem 5 [DONE?]</a></li><li><a href="#6">Problem 6: [DONE?]</a></li></ul></div><h2 id="1">Problem 1: [DONE]</h2><pre class="codeinput">x = linspace(-2,2,25);
+  </style></head><body><div class="content"><h1>Matlab Assignment #2:</h1><!--introduction--><p>Zhenghao Zhu</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Problem 1: [DONE]</a></li><li><a href="#2">Problem 2: [DONE]</a></li><li><a href="#3">Problem 3:</a></li><li><a href="#4">Problem 4: [DONE]</a></li><li><a href="#5">Problem 5 [DONE]</a></li><li><a href="#6">Problem 6: [DONE]</a></li></ul></div><h2 id="1">Problem 1: [DONE]</h2><pre class="codeinput">x = linspace(-2,2,25);
 y = x;
 [x,y] = meshgrid(x,y);
 z = x.*exp(-x.^2-y.^2);
@@ -84,21 +84,18 @@ hold <span class="string">off</span>
 </pre><pre class="codeoutput">Warning: Function behaves unexpectedly on array inputs. To improve performance,
 properly vectorize your function to return an output with the same size and
 shape as the input arguments. 
-</pre><img vspace="5" hspace="5" src="Number2_02.png" alt=""> <h2 id="3">Problem 3:</h2><pre class="codeinput">o=linspace(0,2*pi,50);
-l=linspace(0,5,50);
-[o,l]=meshgrid(o,l);
-x=l;
-y=sqrt(5).*cos(o);
-z=5*l;
-surf(x,y,z)
+</pre><img vspace="5" hspace="5" src="Number2_02.png" alt=""> <h2 id="3">Problem 3:</h2><pre class="codeinput">syms <span class="string">y</span>
+x = linspace(-2,2,50);
+z = 5-y*y;
+fsurf(z, [-2 2]);
 hold <span class="string">on</span>
 u = linspace(0,2*pi,50);
 v = linspace(0,5,50);
-[u,v] = meshgrid(u,v);
+[u,v]=meshgrid(u,v);
 x = 2*cos(u);
 y = 2*sin(u);
 z = v;
-surf(x, y, z);
+surf(x,y,z);
 hold <span class="string">off</span>
 </pre><img vspace="5" hspace="5" src="Number2_03.png" alt=""> <h2 id="4">Problem 4: [DONE]</h2><pre class="codeinput">t = linspace(0,pi,30);
 h = linspace(0,2*pi,30);
@@ -111,7 +108,7 @@ xlabel(<span class="string">'x'</span>)
 ylabel(<span class="string">'y'</span>)
 zlabel(<span class="string">'z'</span>)
 view([0, 2, -1]);
-</pre><img vspace="5" hspace="5" src="Number2_04.png" alt=""> <h2 id="5">Problem 5 [DONE?]</h2><pre class="codeinput">t = linspace(0,12,50);
+</pre><img vspace="5" hspace="5" src="Number2_04.png" alt=""> <h2 id="5">Problem 5 [DONE]</h2><pre class="codeinput">t = linspace(0,12,50);
 s = linspace(0,12,50);
 [s,t]=meshgrid(s,t);
 x = s;
@@ -122,7 +119,7 @@ hold <span class="string">on</span>
 view ([3,-2,1])
 surf(x,y,z)
 hold <span class="string">off</span>
-</pre><img vspace="5" hspace="5" src="Number2_05.png" alt=""> <h2 id="6">Problem 6: [DONE?]</h2><pre class="codeinput">r = linspace(1,3,50);
+</pre><img vspace="5" hspace="5" src="Number2_05.png" alt=""> <h2 id="6">Problem 6: [DONE]</h2><pre class="codeinput">r = linspace(1,3,50);
 theta = linspace(0,2*pi,50);
 [r,theta] = meshgrid(r,theta);
 x = r.*cos(theta);
@@ -152,22 +149,20 @@ hold on
 fsurf(g , [0 2 1 3],'g');
 view([-3 , 1 , -1]);
 hold off
+
 %% Problem 3:
-o=linspace(0,2*pi,50);
-l=linspace(0,5,50);
-[o,l]=meshgrid(o,l);
-x=l;
-y=sqrt(5).*cos(o);
-z=5*l;
-surf(x,y,z)
+syms y
+x = linspace(-2,2,50);
+z = 5-y*y;
+fsurf(z, [-2 2]);
 hold on
 u = linspace(0,2*pi,50);
 v = linspace(0,5,50);
-[u,v] = meshgrid(u,v);
+[u,v]=meshgrid(u,v);
 x = 2*cos(u);
 y = 2*sin(u);
 z = v;
-surf(x, y, z);
+surf(x,y,z);
 hold off
 
 %% Problem 4: [DONE]
@@ -183,7 +178,7 @@ ylabel('y')
 zlabel('z')
 view([0, 2, -1]);
 
-%% Problem 5 [DONE?]
+%% Problem 5 [DONE]
 t = linspace(0,12,50);
 s = linspace(0,12,50);
 [s,t]=meshgrid(s,t);
@@ -196,7 +191,7 @@ view ([3,-2,1])
 surf(x,y,z)
 hold off
 
-%% Problem 6: [DONE?]
+%% Problem 6: [DONE]
 r = linspace(1,3,50);
 theta = linspace(0,2*pi,50);
 [r,theta] = meshgrid(r,theta);

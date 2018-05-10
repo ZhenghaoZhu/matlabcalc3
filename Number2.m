@@ -20,7 +20,7 @@ fsurf(g , [0 2 1 3],'g');
 view([-3 , 1 , -1]);
 hold off
 
-%% Problem 3:
+%% Problem 3: [NOT DONE]
 syms y
 x = linspace(-2,2,50);
 z = 5-y*y;
