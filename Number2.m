@@ -29,7 +29,7 @@ y = r.*sin(t);
 z = 5 - y.^2;
 surf(x,y,z);
 
-%% Problem 4: [DONE]
+%% Problem 4: [NOT DONE]
 u = linspace(0,2*pi,30);
 v = linspace(0,pi,30);
 [u,v] = meshgrid(u,v);
@@ -43,23 +43,20 @@ zlabel('z')
 view([0, 2, -1]);
 
 %% Problem 5 [DONE]
-t = linspace(0,12,50);
-s = linspace(0,12,50);
-[s,t]=meshgrid(s,t);
-x = s;
-y = t;
-z = 12 - (2/3)*s - (1/3)*t;
+u = linspace(0,4,20);
+v = linspace(0,1,20);
+[u,v] = meshgrid(u,v);
+x = u;
+y = (6-(3*u/2)).*v;
+z = 12 - 3.*x - 2.*y;
 surf(x,y,z)
-hold on 
-view ([3,-2,1])
-surf(x,y,z)
-hold off
+view([3,-2,1])
 
 %% Problem 6: [DONE]
 r = linspace(1,3,50);
-theta = linspace(0,2*pi,50);
+theta = linspace(0,pi/2,50);
 [r,theta] = meshgrid(r,theta);
 x = r.*cos(theta);
 y = r.*sin(theta);
-z = r;
+z = sqrt(x.^2+y.^2);
 surf(x,y,z);
