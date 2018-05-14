@@ -30,12 +30,12 @@ z = 5 - y.^2;
 surf(x,y,z);
 
 %% Problem 4: [DONE]
-t = linspace(0,pi,30);
-h = linspace(0,2*pi,30);
-[t,h] = meshgrid(t,h);
-x = (exp(t).*sin(t)).*cos(h);
-y = t;
-z = (exp(t).*sin(t)).*sin(h);
+u = linspace(0,2*pi,30);
+v = linspace(0,pi,30);
+[u,v] = meshgrid(u,v);
+x = u;
+y = v;
+z = (exp(u).*sin(u));
 surf(x,y,z)
 xlabel('x')
 ylabel('y')
