@@ -1,7 +1,7 @@
 %% Matlab Assignment #2:
 % Zhenghao Zhu
 
-%% Problem 1: [DONE]
+%% Problem 1:
 x = linspace(-2,2,25);
 y = x;
 [x,y] = meshgrid(x,y);
@@ -10,7 +10,7 @@ z = x.*exp(-x.^2-y.^2);
 set(h,'LineWidth',2)
 colorbar;
 
-%% Problem 2: [DONE]
+%% Problem 2:
 syms x y
 f = @(x,y) (x^3) + (y^3) - (3*x*y);
 g = @(x,y) x + (3*y) - 7;
@@ -20,7 +20,7 @@ fsurf(g , [0 2 1 3],'g');
 view([-3 , 1 , -1]);
 hold off
 
-%% Problem 3: [NOT DONE]
+%% Problem 3: 
 r= linspace(0,2,50);
 t = linspace(0,2*pi,50);
 [r,t] = meshgrid(r,t);
@@ -29,20 +29,20 @@ y = r.*sin(t);
 z = 5 - y.^2;
 surf(x,y,z);
 
-%% Problem 4: [NOT DONE]
-u = linspace(0,2*pi,30);
-v = linspace(0,pi,30);
+%% Problem 4: 
+u = linspace(0,pi,30);
+v = linspace(0,2*pi,30);
 [u,v] = meshgrid(u,v);
-x = u;
-y = v;
-z = (exp(u).*sin(u));
+x = u.*cos(v);
+y = exp(u).*sin(u);
+z = u.*sin(v);
 surf(x,y,z)
 xlabel('x')
 ylabel('y')
 zlabel('z')
 view([0, 2, -1]);
 
-%% Problem 5 [DONE]
+%% Problem 5 
 u = linspace(0,4,20);
 v = linspace(0,1,20);
 [u,v] = meshgrid(u,v);
@@ -52,7 +52,7 @@ z = 12 - 3.*x - 2.*y;
 surf(x,y,z)
 view([3,-2,1])
 
-%% Problem 6: [DONE]
+%% Problem 6: 
 r = linspace(1,3,50);
 theta = linspace(0,pi/2,50);
 [r,theta] = meshgrid(r,theta);
