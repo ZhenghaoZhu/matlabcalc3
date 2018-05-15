@@ -1,6 +1,6 @@
 %% Matlab Assignment #2:
 % Zhenghao Zhu
-
+% DONE
 %% Problem 1:
 x = linspace(-2,2,25);
 y = x;
@@ -28,7 +28,6 @@ x = r.*cos(t);
 y = r.*sin(t);
 z = 5 - y.^2;
 surf(x,y,z);
-
 %% Problem 4: 
 u = linspace(0,pi,30);
 v = linspace(0,2*pi,30);

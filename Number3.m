@@ -1,6 +1,6 @@
 %% Assignment #3
 % Zhenghao Zhu
-
+% DONE
 %% Problem 1:
 syms x y z t
 P = @(x,y,z) 10+25/(z.^2+1)+sin(2*x.^2+y.^3+z);
